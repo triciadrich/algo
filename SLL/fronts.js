@@ -20,6 +20,23 @@ class LinkedList{
     this.head.next = oldHead;
   }
 
+  removeFront(){
+    if(this.head == null){
+      return this.head
+    }
+    var remove = this.head;
+    this.head = remove.next;
+    remove.next = null;
+    return this.head
+  }
+
+  front(){
+    if(this.head == null){
+      return null;
+    }else{
+      return this.head.data
+    }
+  }
 
 
 
@@ -39,3 +56,4 @@ console.log(SLL);
 
 SLL.addFront(2);
 console.log(SLL);
+console.log(SLL.front())
